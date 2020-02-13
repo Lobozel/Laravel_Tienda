@@ -127,7 +127,7 @@ class ArticuloController extends Controller
             Storage::disk('public')->put($nombre, \File::get($file));
             //si he subido una imagen nueva borro la vieja, SALVO que sea default.jpg
             if(basename($articulo->imagen)!='default.png'){
-                unlink($articulo->imagen);
+                unlink(public_path().$articulo->imagen);
             }
             //ahora actualizo el articulo
             $articulo->update($request->all());
