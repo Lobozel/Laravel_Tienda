@@ -19,7 +19,4 @@
             <a href="{{route('articulos.index')}}" class="float-left btn btn-success">Volver</a>
         </div>
     </div>
-
-
-
 @endsection
